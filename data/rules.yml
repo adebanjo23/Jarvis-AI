@@ -1,0 +1,60 @@
+version: "3.1"
+
+rules:
+
+- rule: greet
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: status
+  steps:
+  - intent: ask_status
+  - action: utter_ask_status
+
+- rule: about jarvis
+  steps:
+  - intent: about_jarvis
+  - action: utter_about_jarvis
+
+- rule: about creator
+  steps:
+  - intent: about_creator
+  - action: utter_about_creator
+
+- rule: control
+  steps:
+  - intent: control
+  - action: action_control_appliance
+  - action: action_reset_slots
+
+#- rule: disable gesture control
+#  steps:
+#  - intent: disable_gesture_control
+#  - action: action_disable_gesture_control
+
+#- rule: play song
+#  steps:
+#  - intent: play_music
+#  - action: action_play_music
+#
+#- rule: Activate gesture_control_form when no other form is active
+#  condition:
+#  # this condition allows stories to handle form switching
+#  - active_loop: null
+#  steps:
+#  - intent: gesture_control
+#  - action: gesture_control_form
+#  - active_loop: gesture_control_form
+#
+#- rule: Submit gesture_control_form while not switched from previous form
+#  condition:
+#  - active_loop: gesture_control_form
+#  - slot_was_set:
+#    - previous_form_name: null
+#  steps:
+#  - action: gesture_control_form
+#  - active_loop: null
+#  - slot_was_set:
+#    - requested_slot: null
+#  - action: action_gesture_control

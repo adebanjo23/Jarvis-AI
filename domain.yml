@@ -1,0 +1,74 @@
+version: '3.1'
+intents:
+- greet
+- ask_status
+- about_jarvis
+- about_creator
+- control
+- problem_statement
+#- gesture_control
+#- disable_gesture_control
+#- play_music
+
+entities:
+- status
+- location
+
+slots:
+#  password:
+#    type: text
+#    influence_conversation: true
+#    mappings:
+#      - type: from_text
+#        conditions:
+#          - active_loop: gesture_control_form
+#            requested_slot: password
+
+  status:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: status
+  location:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: location
+
+responses:
+  utter_greet:
+  - text: hello my friend, what can I do for you
+  utter_ask_status:
+  - text: I am doing very well today, how can i be of help?
+  utter_about_jarvis:
+  - text: '''I am an AI voice assistant that can control all your home appliances with just your voice. you can tell me things like:
+  turn on the room light or the compound light or any other appliance you would like to control
+  '''
+#  utter_ask_gesture_control_form_password:
+#  - text: '''Please say the password'''
+  utter_please_rephrase:
+  - text: You need to stop asking me these type of questions.
+  utter_about_creator:
+  - text: '''I was created by the one and only comedian in the department of Electrical and Information Engineering, The Idea was Inspired by God alone '''
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+actions:
+- action_control_appliance
+- action_reset_slots
+#- action_gesture_control
+#- action_disable_gesture_control
+#- action_play_music
+
+forms:
+  gesture_control_form:
+    ignored_intents: []
+    required_slots:
+    - password
+
+
+
+
+

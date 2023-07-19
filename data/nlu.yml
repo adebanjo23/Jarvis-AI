@@ -1,0 +1,123 @@
+version: "3.1"
+nlu:
+
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - hello jarvis
+    - hi there jarvis
+    - hello jarvis
+- intent: ask_status
+  examples: |
+    - how are you doing today jarvis
+    - tell me how you are doing
+    - how are you doing my friend
+    - how is it going jarvis
+    - how are you doing today jarvis
+    - how are you
+    - how is everything jarvis
+    - how is work jarvis
+    - what's good jarvis
+    - what's doing you jarvis
+- intent: about_jarvis
+  examples: |
+    - tell me about you
+    - who are you
+    - what can you do
+    - what is special about you
+    - tell us about you
+    - tell everyone about your skills
+    - let's know what you can do
+    - tell me the things you can do
+    - jarvis what are you
+    - let me know more about you jarvis
+- intent: about_creator
+  examples: |
+    - who created you
+    - who made you
+    - how were you made
+    - who is the person that made you
+    - tell me about your creator
+    - who put you into form
+- intent: control
+  examples: |
+    - jarvis turn [on](status) the [room](location) light
+    - turn [on](status) the [room](location) light
+    - jarvis [off](status) the [room](location) light
+    - turn [on](status) [room](location) light
+    - put [on](status) [room](location) light
+    - jarvis turn [off](status) the [compound](location) light
+    - turn [off](status) the [compound](location) (light)
+    - how about you put [on](status) the [compound](location) light
+    - let's turn [on](status) the [compound](location) light
+    - jarvis turn [off](status) the [kitchen](location) light
+    - turn [on](status) the [kitchen](location)(light)
+    - how about you put [on](status) the [kitchen](location) light
+    - let's turn [off](status) the [kitchen](location) light
+    - alright turn [on](status) the [kitchen](location) light
+    - jarvis turn [on](status) the [toilet](location) light
+    - turn [on](status) the [toilet](location)(light)
+    - how about you put [on](status) the [toilet](location) light
+    - let's turn [on](status) the [toilet](location) light
+    - alright turn [off](status) the [toilet](location) light
+    - jarvis turn [off](status) the [socket](location)
+    - turn [off](status) the [socket](location)(light)
+    - how about you put [on](status) the [socket](location)
+    - let's turn [on](status) the [socket](location)
+    - put [on](status) the [socket](location)
+    - jarvis turn [on](status) the [balcony](location) light
+    - turn [off](status) the [balcony](location)(light)
+    - how about you put [on](status) the [step](location) light
+    - let's turn [on](status) the [step](location) light
+    - alright turn [on](status) the [step](location) light
+    - jarvis turn [off](status) the [step](location) light
+    - jarvis turn [on](status) the [shower](location) light
+    - turn [on](status) the [shower](location) light
+    - jarvis [off](status) the [shower](location) light
+    - turn [on](status) [shower](location) light
+    - put [on](status) [shower](location) light
+    - jarvis turn [on](status) [all](location) the light
+    - turn [on](status) [all](location) the light
+    - jarvis [off](status) [all](location) lights
+    - turn [on](status) [all](location) the light
+    - put [on](status) [all](location) the lights
+    - jarvis turn [on](status) [ground](location) floor light
+    - turn [on](status) the [ground](location) floor lights
+    - jarvis turn [off](status) [ground](location) floor lights
+    - turn [on](status) [ground](location) lights
+    - put [on](status) the [all](location) the lights
+- intent: problem_statement
+  examples: |
+    - jarvis what's our problem statement
+    - jarvis tell me about our problem statement
+    - what is our problem statement
+    - what problem are we trying to solve
+    - jarvis what problem are we actually trying to solve
+    - what exactly are we solving
+#- intent: gesture_control
+#  examples: |
+#    - jarvis enable gesture control
+#    - enable gesture control
+#    - alright, this time enable gesture control
+#    - enable gesture control for my applications
+#    - activate gesture control
+#    - jarvis activate gesture control
+#- intent: disable_gesture_control
+#  examples: |
+#    - jarvis disable gesture control
+#    - How about you disable gesture control
+#    - alright, this time disable gesture control
+#    - disable gesture control for my applications
+#    - turn off gesture control
+#- intent: play_music
+#  examples: |
+#    - activate sound control
+#    - play me a music
+#    - play me a song
+#    - activate sound system
+#    - lets enjoy some nice music

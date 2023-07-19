@@ -1,0 +1,34 @@
+digraph  {
+0 [class="start active", fillcolor=green, fontsize=12, label=START, style=filled];
+"-1" [class=end, fillcolor=red, fontsize=12, label=END, style=filled];
+1 [class="", fontsize=12, label=utter_greet];
+5 [class="", fontsize=12, label=utter_greet_telugu];
+"-7" [class=ellipsis, label="..."];
+"-8" [class=ellipsis, label="..."];
+7 [class=active, fontsize=12, label=action_save_slot];
+8 [class=active, fontsize=12, label=action_data_usage_today];
+14 [class="intent dashed active", label="  ?  ", shape=rect];
+15 [class=intent, fillcolor=lightblue, label="/greet", shape=rect, style=filled];
+16 [class=intent, fillcolor=lightblue, label="/telegram_start", shape=rect, style=filled];
+17 [class=intent, fillcolor=lightblue, label="/greet_telugu", shape=rect, style=filled];
+18 [class="intent active", fillcolor=lightblue, label="/inform", shape=rect, style=filled];
+19 [class="intent active", fillcolor=lightblue, label="/today_data_usage", shape=rect, style=filled];
+20 [class="intent active", fillcolor=lightblue, label="/today_data_usage", shape=rect, style=filled];
+0 -> "-1"  [class="", key=NONE, label=""];
+0 -> 15  [class="", key=0];
+0 -> 16  [class="", key=0];
+0 -> 17  [class="", key=0];
+0 -> 18  [class=active, key=0];
+1 -> "-8"  [class="", key=NONE, label=""];
+5 -> "-7"  [class="", key=NONE, label=""];
+7 -> 19  [class=active, key=0];
+8 -> 8  [class=active, key=NONE, label=""];
+8 -> 14  [class=active, key=NONE, label=""];
+8 -> 20  [class=active, key=0];
+15 -> 1  [class="", key=0];
+16 -> 1  [class="", key=0];
+17 -> 5  [class="", key=0];
+18 -> 7  [class=active, key=0];
+19 -> 8  [class=active, key=0];
+20 -> 8  [class=active, key=0];
+}
